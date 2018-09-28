@@ -1,43 +1,217 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="assets/img/favicon.ico">
 
-    <title>JDISConf 2018</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="assets/img/favicon.ico">
 
-    <!-- Open Graph data -->
-    <meta property="og:title" content="JDISConf 2018" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://conference2018.jdis.ca/" />
-    <meta property="og:image" content="https://conference2018.jdis.ca/assets/img/preview.png" />
+  <title>JDISConf 2018</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="JDISConf 2018" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://conference2018.jdis.ca/" />
+  <meta property="og:image" content="https://conference2018.jdis.ca/assets/img/preview.png" />
 
-    <script type="text/javascript">
-      var host = "conference2018.jdis.ca";
-      if ((host == window.location.host) && (window.location.protocol != "https:"))
-          window.location.protocol = "https";
-    </script>
-  </head>
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
-  <body class="wrapper">
-    <div class="menu">
-      <img class="menu__logo" src="/assets/img/logo.svg"/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+
+  <script type="text/javascript">
+    var host = "conference2018.jdis.ca";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https";
+  </script>
+</head>
+
+<body class="wrapper">
+  <div class="menu">
+    <img class="menu__logo" src="/assets/img/logo.svg" />
+  </div>
+  <div class="main">
+    <div class="narrow">
+      <div id="info" class="hero">
+        <p>27 octobre 2018 &mdash; Université&nbsp;de&nbsp;Sherbrooke</p>
+        <h1>Mégadonnées, sécurité, et <em>machine learning</em>.</h1>
+        <p class="description">Cette année à JDISConf, trois conférenciers de chez SAP, Coveo et GRIIS viendront présenter
+          devant une foule passionnée du monde des données. Une journée à ne pas manquer &mdash; et c'est gratuit!</p>
+        <a href="#" class="button disabled">Billets bientôt disponibles</a>
+      </div>
+      <hr>
+      <div id="conferenciers">
+        <h2>Conférenciers</h2>
+        <p>Encore cette année, des spécialistes de divers domaines ont été sélectionnés à la main pour faire partie de la
+          lignée de conférenciers. </p>
+        <br>
+        <div>
+          <div class="grid">
+            <div class="speaker" style="background-image:url('/assets/img/speakers/christine.jpg')">
+              <div class="speaker-content shadow">
+                <div><strong>Christine Yu</strong><br/>Ingénieure logicielle chez Coveo
+                </div>
+              </div>
+            </div>
+            <div class="speaker" style="background-image:url('/assets/img/speakers/joerg.jpg')">
+              <div class="speaker-content shadow">
+                <div><strong>Joerg Hendricks</strong><br/><em>Lead Architect</em> chez SAP
+                </div>
+              </div>
+            </div>
+            <div class="speaker" style="background-image:url('/assets/img/speakers/thibaud.jpg')">
+              <div class="speaker-content shadow">
+                <div><strong>Thibaud Ecarot</strong><br/>Chercheur au GRIIS
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="partenaires">
+        <h2>Notre partenaire de succès</h2>
+        <p>Merci à <a href="https://www.coveo.com/fr" target="_blank">Coveo</a> d'appuyer JDISConf 2018!</p>
+        <br>
+        <img class="sponsor" src="assets/img/sponsors/coveo.svg" />
+      </div>
+      <hr/>
+      <div id="horaire">
+        <h2>Horaire</h2>
+        <p>L'horaire est donné à titre indicatif et peut changer d'ici l'événement.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Heure</strong>
+              </td>
+              <td>
+                <strong>Sujet</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>09h00</td>
+              <td>Accueil et déjeuner</td>
+            </tr>
+            <tr>
+              <td>09h45</td>
+              <td>Ouverture et mot de bienvenue</td>
+            </tr>
+            <tr>
+              <td>10h05</td>
+              <td class="disabled">(à venir)</td>
+            </tr>
+            <tr>
+              <td>11h00</td>
+              <td>Pause</td>
+            </tr>
+            <tr>
+              <td>11h10</td>
+              <td class="disabled">(à venir)</td>
+            </tr>
+            <tr>
+              <td>12h05</td>
+              <td>Dîner</td>
+            </tr>
+            <tr>
+              <td>13h15</td>
+              <td class="disabled">(à venir)</td>
+            </tr>
+            <tr>
+              <td>14h15</td>
+              <td>Pause</td>
+            </tr>
+            <tr>
+              <td>14h30</td>
+              <td class="disabled">(à venir)</td>
+            </tr>
+            <tr>
+              <td>15h55</td>
+              <td>Pause</td>
+            </tr>
+            <tr>
+              <td>16h10</td>
+              <td class="disabled">(à venir)</td>
+            </tr>
+            <tr>
+              <td>16h45</td>
+              <td>Mot de fermeture et prix de présence</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="emplacement">
+        <h2>Emplacement</h2>
+        <p>Une première pour JDISConf &mdash; l'événement aura lieu au <strong>Centre culturel de l'Université de Sherbrooke</strong>.
+          Le stationnement est gratuit la fin de semaine.</p>
+
+        <div id='map' style='width: 100%; height: 400px;'></div>
+        <script>
+          mapboxgl.accessToken = "pk.eyJ1IjoibWF4aW1ldmFpbGxhbmNvdXJ0IiwiYSI6ImNqbWw0MXhkdTA0ZDIza2s2MnN3dTl0aWsifQ.2KrTKvc0ZygaWW1nzwfWhA";
+
+          /* Map: This represents the map on the page. */
+          var map = new mapboxgl.Map({
+            container: "map",
+            style: "mapbox://styles/mapbox/light-v9",
+            zoom: 16.0,
+            center: [-71.92777, 45.37854],
+            interactive: false
+          });
+
+          map.addControl(new mapboxgl.NavigationControl());
+
+          map.on("load", function () {
+            /* Image: An image is loaded and added to the map. */
+            map.loadImage("https://i.imgur.com/MK4NUzI.png", function (error, image) {
+              if (error) throw error;
+              map.addImage("custom-marker", image);
+              /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+              map.addLayer({
+                id: "markers",
+                type: "symbol",
+                /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+                source: {
+                  type: "geojson",
+                  data: {
+                    type: "FeatureCollection",
+                    features: [{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [-71.92770159417007, 45.378556825181334] } }]
+                  }
+                },
+                layout: {
+                  "icon-image": "custom-marker",
+                }
+              });
+            });
+          });
+        </script>
+      </div>
+      <hr>
+      <div id="contact">
+        <h2>Pour plus d'informations</h2>
+        <p>Contactez-nous <a href="https://www.facebook.com/jdisherbrooke" target="_blank">via Facebook</a> ou par courriel
+          au <a href="mailto:info@jdis.ca">info@jdis.ca</a>.</p>
+      </div>
     </div>
-    <div class="main">
-      <p class="lead"><strong>Le fameux <em>Big Data</em>, ça vous dit quelque chose?</strong></p>
-      <p>Jeux et défis informatiques de Sherbrooke organise une conférence orientée <strong>données</strong> à l'Université de Sherbrooke le 27 octobre 2018, fièrement présentée par <a href="https://www.coveo.com/fr" target="_blank">Coveo</a>, partenaire principal de l'événement.</p>
-      <p>Pour être au courant de la disponibilité des billets, <a href="https://www.facebook.com/JDISherbrooke/">suivez JDIS sur Facebook</a>.</p>
-      <p class="attribution">
-        <a target="_blank" href="https://thenounproject.com/search/?q=1434542&i=1434542"><em>Big data</em></a> par <a target="_blank" href="https://thenounproject.com/mordarius/">Eliricon</a>, utilisé sous licence <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/deed.fr">CC BY</a> / adapté de l'original
-      </p>
+    <br>
+    <div class="footer">
+      <div class="narrow">
+        <div class="attribution">
+          Logo inspiré de
+          <a target="_blank" href="https://thenounproject.com/search/?q=1434542&i=1434542">«Big data»</a>
+          par
+          <a target="_blank" href="https://thenounproject.com/mordarius/">Eliricon</a>
+          , utilisé sous licence
+          <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/deed.fr">CC BY</a>
+          / adapté de l'original
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
