@@ -119,6 +119,7 @@ a:hover {
   justify-content: center;
   flex-direction: column;
   flex: 1;
+  text-align: center;
 }
 
 .menu a {
@@ -201,6 +202,14 @@ a:hover {
   margin-left: 5px;
   margin-right: 5px;
   flex: 1 1 200px;
+
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+
+.speaker:hover {
+  opacity: 0.9;
+  text-decoration: none;
 }
 
 .speaker > .speaker-content {
@@ -314,4 +323,9 @@ tr:nth-child(even) {
   -ms-user-select: none;
   user-select: none;
   filter: grayscale(0.5);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 3px;
 }
