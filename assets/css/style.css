@@ -306,7 +306,6 @@ tr:nth-child(even) {
 }
 
 .sponsor {
-  width: 100%;
   align-self: center;
   border-radius: 2px;
 }
