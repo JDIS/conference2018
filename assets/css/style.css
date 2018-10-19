@@ -203,7 +203,7 @@ a:hover {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .partenaires__wrapper-categorie img {
@@ -211,7 +211,8 @@ a:hover {
 }
 
 .partenaires__wrapper-categorie--or img {
-  max-height: 13vw;
+  max-height: 15vw;
+  max-width: 40vw;
 }
 
 .partenaires__wrapper-categorie--argent img {
@@ -229,6 +230,7 @@ a:hover {
 
   .partenaires__wrapper-categorie--or img {
     max-height: 10vw;
+    max-width: 27vw;
   }
 
   .partenaires__wrapper-categorie--argent img {
